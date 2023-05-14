@@ -1,0 +1,23 @@
+.header {
+  background-color: rgb(241, 99, 99);
+
+  nav {
+    ul {
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      height: 2rem;
+      list-style: none;
+      align-items: center;
+      font-size: 18px;
+      justify-content: center;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .active {
+    color: orange;
+  }
+}
