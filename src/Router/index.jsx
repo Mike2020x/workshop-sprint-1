@@ -4,7 +4,6 @@ import Root from "../layout/Root";
 import Home, { loaderProducts } from "../pages/Home";
 import About from "../pages/About";
 import NotFound from "../pages/NotFound";
-// import ProductDetail from "../pages/ProductDetail";
 import ProductCard, {
   loaderProduct,
 } from "../components/ProductCard/ProductCard";
