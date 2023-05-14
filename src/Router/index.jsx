@@ -4,8 +4,10 @@ import Root from "../layout/Root";
 import Home, { loaderProducts } from "../pages/Home";
 import About from "../pages/About";
 import NotFound from "../pages/NotFound";
-import ProductDetail from "../pages/ProductDetail";
-
+// import ProductDetail from "../pages/ProductDetail";
+import ProductCard, {
+  loaderProduct,
+} from "../components/ProductCard/ProductCard";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,8 +24,9 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "productdetail",
-        element: <ProductDetail />,
+        path: "productdetail/:id",
+        element: <ProductCard />,
+        loader: loaderProduct,
       },
     ],
   },

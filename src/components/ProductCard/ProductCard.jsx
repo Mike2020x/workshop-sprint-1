@@ -1,14 +1,40 @@
+import { useLoaderData } from "react-router-dom";
 import "./index.scss";
-function ProductCard(props) {
-  const { image, title } = props;
+
+const ProductCard = () => {
+  const { product } = useLoaderData();
 
   return (
-    <div className="container">
-      <img src={image} alt={title} />
-      <h2>{title}</h2>
-      <button>go to details</button>
+    <div className="product-card-container">
+      <div className="container">
+        <div className="up">
+          {" "}
+          <h2>{product.title}</h2>
+          <img src={product.image} alt={product.title} />
+          <p>{product.description}</p>
+        </div>
+        <div className="down">
+          <p>
+            <strong>Price:</strong> ${product.price}
+          </p>
+          <p>
+            <strong>Category:</strong> {product.category}
+          </p>
+          <p>
+            <strong>Rating:</strong> {product.rating.rate}
+          </p>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default ProductCard;
+
+export const loaderProduct = async ({ params }) => {
+  const { id } = params;
+  const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+  const data = await response.json();
+
+  return { product: data };
+};

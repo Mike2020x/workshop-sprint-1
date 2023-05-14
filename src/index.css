@@ -349,3 +349,30 @@ template {
 [hidden] {
   display: none;
 }
+
+.productlist {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.about {
+  margin-bottom: 3rem;
+}
+
+main {
+  align-items: center;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.product-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.about {
+  margin: 0 0 5rem 5rem;
+}
