@@ -23,6 +23,9 @@ const ProductCard = () => {
           <p>
             <strong>Rating:</strong> {product.rating.rate}
           </p>
+          <p>
+            <strong>Count:</strong> {product.rating.count}
+          </p>
         </div>
       </div>
     </div>
